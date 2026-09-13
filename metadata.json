@@ -1,0 +1,7 @@
+{
+  "name": "WALLORA ULTIMATE",
+  "description": "Ultimate Android wallpaper and customization studio with 4K wallpapers, advanced clock customizer, lock & home screen preview, AI wallpaper generator, photo wallpaper maker, and rich editor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
