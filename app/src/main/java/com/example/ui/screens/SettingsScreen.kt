@@ -66,7 +66,7 @@ import com.example.ui.theme.WalloraVividMagenta
 import com.example.ui.viewmodel.WallpaperViewModel
 import java.io.File
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, coil.annotation.ExperimentalCoilApi::class)
 @Composable
 fun SettingsScreen(
     viewModel: WallpaperViewModel

@@ -20,10 +20,10 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.FormatAlignLeft
+import androidx.compose.material.icons.automirrored.filled.FormatAlignRight
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.FormatAlignCenter
-import androidx.compose.material.icons.filled.FormatAlignLeft
-import androidx.compose.material.icons.filled.FormatAlignRight
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
@@ -354,7 +354,7 @@ fun ClockCustomizerSheet(
                         .weight(1f)
                         .background(if (config.alignment == ClockAlignment.LEFT) WalloraNeonCyan else MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(8.dp))
                 ) {
-                    Icon(Icons.Default.FormatAlignLeft, contentDescription = "Left", tint = if (config.alignment == ClockAlignment.LEFT) Color.Black else Color.White)
+                    Icon(Icons.AutoMirrored.Filled.FormatAlignLeft, contentDescription = "Left", tint = if (config.alignment == ClockAlignment.LEFT) Color.Black else Color.White)
                 }
                 IconButton(
                     onClick = { viewModel.updateClockConfig(config.copy(alignment = ClockAlignment.CENTER)) },
@@ -370,7 +370,7 @@ fun ClockCustomizerSheet(
                         .weight(1f)
                         .background(if (config.alignment == ClockAlignment.RIGHT) WalloraNeonCyan else MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(8.dp))
                 ) {
-                    Icon(Icons.Default.FormatAlignRight, contentDescription = "Right", tint = if (config.alignment == ClockAlignment.RIGHT) Color.Black else Color.White)
+                    Icon(Icons.AutoMirrored.Filled.FormatAlignRight, contentDescription = "Right", tint = if (config.alignment == ClockAlignment.RIGHT) Color.Black else Color.White)
                 }
             }
 

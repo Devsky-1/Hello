@@ -15,8 +15,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.GenericShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Chat
 import androidx.compose.material.icons.filled.CameraAlt
-import androidx.compose.material.icons.filled.Chat
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Phone
@@ -90,7 +90,7 @@ fun IconPreviewRow(
     val sampleApps = if (isDock) {
         listOf(
             SampleApp("Phone", Icons.Default.Phone, Color(0xFF10B981)),
-            SampleApp("Messages", Icons.Default.Chat, Color(0xFF3B82F6)),
+            SampleApp("Messages", Icons.AutoMirrored.Filled.Chat, Color(0xFF3B82F6)),
             SampleApp("Chrome", Icons.Default.Language, Color(0xFFF59E0B)),
             SampleApp("Camera", Icons.Default.CameraAlt, Color(0xFFEF4444))
         )

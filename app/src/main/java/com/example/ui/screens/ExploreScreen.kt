@@ -13,9 +13,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Sort
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -93,13 +93,13 @@ fun ExploreScreen(
                     }
                     Box {
                         IconButton(onClick = { showSortMenu = true }) {
-                            Icon(Icons.Default.Sort, contentDescription = "Sort")
+                            Icon(Icons.AutoMirrored.Filled.Sort, contentDescription = "Sort")
                         }
                         DropdownMenu(
                             expanded = showSortMenu,
                             onDismissRequest = { showSortMenu = false }
                         ) {
-                            WallpaperSortOrder.values().forEach { order ->
+                            WallpaperSortOrder.entries.forEach { order ->
                                 DropdownMenuItem(
                                     text = { Text(order.label) },
                                     onClick = {
@@ -122,7 +122,7 @@ fun ExploreScreen(
                 .background(MaterialTheme.colorScheme.background)
         ) {
             // Category Tabs
-            val categories = WallpaperCategory.values()
+            val categories = WallpaperCategory.entries
             val selectedIndex = categories.indexOf(selectedCategory).coerceAtLeast(0)
 
             ScrollableTabRow(
@@ -130,7 +130,7 @@ fun ExploreScreen(
                 containerColor = MaterialTheme.colorScheme.background,
                 contentColor = MaterialTheme.colorScheme.onBackground,
                 indicator = { tabPositions ->
-                    TabRowDefaults.Indicator(
+                    TabRowDefaults.SecondaryIndicator(
                         Modifier.tabIndicatorOffset(tabPositions[selectedIndex]),
                         color = WalloraNeonCyan,
                         height = 2.5.dp
